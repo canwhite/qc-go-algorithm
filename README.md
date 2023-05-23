@@ -10,3 +10,10 @@ go and algorithm
 * btree
 * bstree
 * linkedlist
+
+
+# run
+```
+//root
+go run .
+```
