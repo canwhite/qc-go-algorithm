@@ -11,6 +11,10 @@ go and algorithm
 * bstree
 * linkedlist
 
+# target
+* 熟练语言
+* 增进对一些算法概念的理解
+
 
 # run
 ```
