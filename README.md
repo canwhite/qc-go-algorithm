@@ -3,7 +3,7 @@ go and algorithm
 
 
 
-# squence
+# sequence
 * dp   
 * slide
 * backtrack
