@@ -37,6 +37,7 @@ func backtrace(candidates []int, target int, index int, path []int, result *[][]
 	for i := index; i < len(candidates); i++ {
 		//做选择
 		path = append(path, candidates[i])
+
 		//进入下一层搜索
 		backtrace(candidates, target-candidates[i], i, path, result)
 
