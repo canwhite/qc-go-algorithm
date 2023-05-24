@@ -12,6 +12,7 @@ func MaxDepth(root *lib.TreeNode) int {
 		return 0
 	}
 	//DFS搜索左右子树的最大深度
+	//第一次用的时候，定义加初始化
 	leftMax := MaxDepth(root.Left)
 	rightMax := MaxDepth(root.Right)
 	//取左右子树最大深度的最大值，然后加上当前根节点，得到此树最大深度
