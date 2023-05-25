@@ -5,13 +5,15 @@ import (
 	dp "qc-go-algorithm/1_dp"
 	slide "qc-go-algorithm/2_slide"
 	tree "qc-go-algorithm/4_btree"
+	linkedlist "qc-go-algorithm/6_linkedlist"
 	lib "qc-go-algorithm/lib"
 )
 
 func main() {
 	// testDp()
 	// testSlide()
-	testBTree()
+	// testBTree()
+	testLinkedList()
 }
 
 func testDp() {
@@ -54,4 +56,26 @@ func testBTree() {
 	result := tree.MaxDepth(t1)
 	fmt.Println(result)
 
+}
+func testLinkedList() {
+	//串成一串
+	node1 := &lib.ListNode{Val: 5}
+	node2 := &lib.ListNode{Val: 4, Next: node1}
+	node3 := &lib.ListNode{Val: 3, Next: node2}
+	node4 := &lib.ListNode{Val: 2, Next: node3}
+	node5 := &lib.ListNode{Val: 1, Next: node4}
+	fmt.Println(linkedListToStr(node5))
+	// fmt.Println(node5)
+	result := linkedlist.ReverseList(node5)
+	fmt.Println(linkedListToStr(result))
+
+}
+func linkedListToStr(head *lib.ListNode) string {
+	cur := head
+	var str string
+	for cur != nil {
+		str += fmt.Sprintf("%d -> ", cur.Val)
+		cur = cur.Next
+	}
+	return str + "nil"
 }
