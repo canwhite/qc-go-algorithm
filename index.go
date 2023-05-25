@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 	dp "qc-go-algorithm/1_dp"
-	slide "qc-go-algorithm/2_slide"
-	tree "qc-go-algorithm/4_btree"
-	linkedlist "qc-go-algorithm/6_linkedlist"
+	dpointer "qc-go-algorithm/2_ie_slide"
+	tree "qc-go-algorithm/5_btree"
+	linkedlist "qc-go-algorithm/7_linkedlist"
 	lib "qc-go-algorithm/lib"
 )
 
@@ -25,7 +25,7 @@ func testDp() {
 func testSlide() {
 	//最大连续子数组和
 	nums := []int{1, 2, -3, -4, 3, 0, 7, 8, 2, 10}
-	max := slide.MaxSubArray(nums)
+	max := dpointer.MaxSubArray(nums)
 	fmt.Println(max)
 
 }
