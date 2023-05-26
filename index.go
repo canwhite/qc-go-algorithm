@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 	dp "qc-go-algorithm/1_dp"
-	dpointer "qc-go-algorithm/2_ie_slide"
+	slide "qc-go-algorithm/2_ie_slide"
+	stack "qc-go-algorithm/3_ie_stack"
 	tree "qc-go-algorithm/5_btree"
 	linkedlist "qc-go-algorithm/7_linkedlist"
 	lib "qc-go-algorithm/lib"
@@ -13,7 +14,8 @@ func main() {
 	// testDp()
 	// testSlide()
 	// testBTree()
-	testLinkedList()
+	// testLinkedList()
+	stackTest()
 }
 
 func testDp() {
@@ -25,7 +27,7 @@ func testDp() {
 func testSlide() {
 	//最大连续子数组和
 	nums := []int{1, 2, -3, -4, 3, 0, 7, 8, 2, 10}
-	max := dpointer.MaxSubArray(nums)
+	max := slide.MaxSubArray(nums)
 	fmt.Println(max)
 
 }
@@ -78,4 +80,11 @@ func linkedListToStr(head *lib.ListNode) string {
 		cur = cur.Next
 	}
 	return str + "nil"
+}
+
+func stackTest() {
+	arr := []int{5, 3, 1, 2, 4}
+	res := stack.DailyTemperatures(arr)
+	fmt.Println(res)
+
 }
