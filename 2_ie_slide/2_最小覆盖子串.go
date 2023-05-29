@@ -6,6 +6,9 @@ import "math"
 // 使用滑动窗口,不断缩小窗口所有包含s2所有字符的子串。
 func MinWindow(s1, s2 string) string {
 	// 定义两个哈希表，need记录s2中每个字符的个数，
+	///而需要统计的只是ASCII字符,一个byte(8位)就足够表示一个ASCII字符了
+	//一个rune可以表示一个Unicode码点,它的大小是32位。
+	//这里因为是ASCII，所以byte就够了
 	need := make(map[byte]int)
 	//window记录s1中窗口内每个字符的个数
 	window := make(map[byte]int)
