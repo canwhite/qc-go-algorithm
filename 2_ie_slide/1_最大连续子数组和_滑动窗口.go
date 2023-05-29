@@ -24,6 +24,7 @@ func MaxSubArray(nums []int) int {
 	// 滑动窗口当前和
 	currentSum := 0
 
+	//通过for循环让窗口移动
 	for _, n := range nums {
 		// 当前窗口和如果<=0,舍弃当前窗口,从当前元素开始新的窗口
 		if currentSum <= 0 {

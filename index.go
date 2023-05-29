@@ -15,7 +15,8 @@ func main() {
 	// testSlide()
 	// testBTree()
 	// testLinkedList()
-	stackTest()
+	// stackTest()
+	testSlide()
 }
 
 func testDp() {
@@ -26,9 +27,17 @@ func testDp() {
 }
 func testSlide() {
 	//最大连续子数组和
+	/**
 	nums := []int{1, 2, -3, -4, 3, 0, 7, 8, 2, 10}
 	max := slide.MaxSubArray(nums)
 	fmt.Println(max)
+	*/
+
+	//最小覆盖子串
+	s := "ADOBECODEBANC"
+	t := "ABC"
+	min := slide.MinWindow(s, t)
+	fmt.Println(min)
 
 }
 
