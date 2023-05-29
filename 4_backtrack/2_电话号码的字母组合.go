@@ -47,7 +47,7 @@ func backtrack(digits string, index int, path []byte, ans *[]string) {
 	//遍历每个字母，走位当前位置的选择
 
 	for i := 0; i < len(letters); i++ {
-		//将字母加入组合
+		//将字母加入组合，a、b、c每个都会再往下递归
 		path = append(path, letters[i])
 		//递归的遍历下一个数字
 		backtrack(digits, index+1, path, ans)
