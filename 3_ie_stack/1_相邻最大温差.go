@@ -42,6 +42,8 @@ func DailyTemperatures(nums []int) []int {
 		// stack里存的，相当于前置的比较大的数的下标
 		// 而num相当于一个后置指针对应的值，然后这里循环去和前边指针对应的值去比较
 		// 然后这道题是计算出坐标差值
+		// 当前边的小于num的时候，去计算，后边找大的
+		// 栈不为空，且后边出现了大值
 		for len(stack) > 0 && nums[len(stack)-1] < num {
 			//弹出堆顶下标，然后做相关操作，这里用的是距离，所以没用到原值
 			topIndex := stack[len(stack)-1]
@@ -52,7 +54,7 @@ func DailyTemperatures(nums []int) []int {
 			stack = stack[:len(stack)-1]
 		}
 		fmt.Println("push:", i)
-		//这个相当于保存满足条件值的下标
+		//这个相当于保存下标对应的值
 		stack = append(stack, i)
 	}
 	return res
