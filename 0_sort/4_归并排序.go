@@ -24,6 +24,7 @@ func MergeSort(nums []int) []int {
 
 	//对左右两边递归的进行归并排序
 	//这里是分别对左右的指针先分再治，都是有序的了
+	//是先从上一层层递归拆分到最小，然后一层层向上合并
 	left = MergeSort(left)
 	right = MergeSort(right)
 
