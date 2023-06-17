@@ -108,14 +108,19 @@ D(3)E(4)F(5)G(6)
 */
 func HeapSort(nums []int) []int {
 	// 建立初始堆,i表示第一个非叶子节点,len(nums)/2-1表示最后一个非叶子节点
+	//这里因为i是从0开始的，所以（n-1-1）/2 就能与n/2-1
 	for i := len(nums)/2 - 1; i >= 0; i-- {
 		// 调整堆,将最大值移至顶部
 		heapify(nums, i, len(nums))
 	}
 	// 移除堆顶元素并调整堆,重复直到堆为空
+	// 移除栈顶元素的方法，就是当前长减去1
+	// 这里最初只是一个初始值，这个i十一直变化的
+	// 通过交换和减少len参数来实现从堆中移除元素的效果
 	for i := len(nums) - 1; i > 0; i-- {
+		// 先交换，再减少
 		nums[0], nums[i] = nums[i], nums[0]
-		// 调整堆
+		// 调整堆。len参数减去1发生在这里
 		heapify(nums, 0, i)
 	}
 	return nums
