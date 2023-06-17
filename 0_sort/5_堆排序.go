@@ -118,7 +118,7 @@ func HeapSort(nums []int) []int {
 	// 这里最初只是一个初始值，这个i十一直变化的
 	// 通过交换和减少len参数来实现从堆中移除元素的效果
 	for i := len(nums) - 1; i > 0; i-- {
-		// 先交换，再减少
+		// 先交换，再减少len
 		nums[0], nums[i] = nums[i], nums[0]
 		// 调整堆。len参数减去1发生在这里
 		heapify(nums, 0, i)
